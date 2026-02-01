@@ -1,21 +1,25 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // Tambahkan AnimatePresence
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
     const [activeSection, setActiveSection] = React.useState('home');
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const menuRef = useRef(null);
 
     const navItems = [
         { name: 'Home', link: '#home' },
         { name: 'About', link: '#about' },
         { name: 'Skill', link: '#skills' },
-        { name: 'Project', link: '#projects' },
+        { name: 'Portfolio', link: '#projects' },
         { name: 'Contact', link: '#contact' },
     ];
 
     const handleNavClick = (itemName) => {
         setActiveSection(itemName.toLowerCase());
-        setIsMenuOpen(false);
+        // Add a small delay before closing the menu to allow anchor link navigation
+        setTimeout(() => {
+            setIsMenuOpen(false);
+        }, 100);
     };
 
     const lightColors = {
@@ -58,16 +62,15 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 {/* Desktop Navigation Links */}
                 <div className="hidden lg:flex items-center space-x-6">
                     {navItems.map((item) => (
-                        <a 
-                            key={item.name} 
+                        <a
+                            key={item.name}
                             href={item.link}
                             onClick={() => handleNavClick(item.name)}
                             className="relative px-2 py-1"
                         >
                             <motion.span
-                                className={`font-medium transition-colors duration-300 ${
-                                    activeSection === item.name.toLowerCase() ? colors.textActive : `${colors.textSecondary} ${colors.textHover}`
-                                }`}
+                                className={`font-medium transition-colors duration-300 ${activeSection === item.name.toLowerCase() ? colors.textActive : `${colors.textSecondary} ${colors.textHover}`
+                                    }`}
                                 whileHover={{ scale: 1.05 }}
                             >
                                 {item.name}
@@ -102,9 +105,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
                     {/* Mobile Menu Button */}
                     <div className="lg:hidden flex items-center">
-                        <button 
-                            onClick={() => setIsMenuOpen(!isMenuOpen)} 
-                            className={`p-2 rounded-lg ${colors.textPrimary}`}
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className={`mobile-menu-button p-2 rounded-lg ${colors.textPrimary}`}
                         >
                             <span className="text-2xl">{isMenuOpen ? '✕' : '☰'}</span>
                         </button>
@@ -115,6 +118,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
+                        ref={menuRef}
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
@@ -122,21 +126,42 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                     >
                         <div className="flex flex-col p-6 space-y-4">
                             {navItems.map((item) => (
-                                <a
+                                <motion.a
                                     key={item.name}
                                     href={item.link}
-                                    onClick={() => handleNavClick(item.name)}
-                                    className={`text-lg font-semibold ${
-                                        activeSection === item.name.toLowerCase() ? colors.textActive : colors.textSecondary
-                                    }`}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setActiveSection(item.name.toLowerCase());
+
+                                        const targetId = item.link.replace('#', '');
+                                        const targetElement = document.getElementById(targetId);
+
+                                        setIsMenuOpen(false);
+
+                                        if (targetElement) {
+                                            setTimeout(() => {
+                                                targetElement.scrollIntoView({ behavior: 'smooth' });
+                                            }, 300); 
+                                        }
+                                    }}
+                                    className={`text-lg font-semibold py-2 px-3 rounded-lg transition-all duration-300 ${activeSection === item.name.toLowerCase() ? colors.textActive : colors.textSecondary
+                                        } hover:bg-white/10 hover:text-orange-500`}
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
                                 >
                                     {item.name}
-                                </a>
+                                </motion.a>
                             ))}
-                            <hr className="opacity-10" />
-                            <button className={`w-full py-3 rounded-xl font-bold text-white bg-gradient-to-r ${colors.button}`}>
+                            <hr className="opacity-20 my-4" />
+                            <motion.a
+                                href="#contact"
+                                onClick={() => setIsMenuOpen(false)}
+                                className={`w-full py-3 rounded-xl font-bold text-white bg-gradient-to-r ${colors.button} text-center shadow-lg`}
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                            >
                                 Hire Me
-                            </button>
+                            </motion.a>
                         </div>
                     </motion.div>
                 )}

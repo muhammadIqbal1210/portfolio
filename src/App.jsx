@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Contact from './components/Contact';
+import ChatWidget from './components/ChatWidget';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -22,7 +27,11 @@ function App() {
     <div className={`min-h-screen transition-colors duration-500 ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>
       <Navbar darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
       <Hero darkMode={darkMode} />
-      {/* Tambahkan Section About, Skill, dll di sini nanti */}
+      <About darkMode={darkMode} />
+      <Projects darkMode={darkMode} />
+      <Skills darkMode={darkMode} />
+      <Contact darkMode={darkMode} />
+      <ChatWidget darkMode={darkMode} />
     </div>
   );
 }
