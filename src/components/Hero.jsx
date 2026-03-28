@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import fotoSaya from '../assets/profile.png';
 
 const Hero = ({ darkMode }) => {
     const roles = ['Web Developer', 'Mobile Developer', 'UI/UX Designer'];
@@ -80,11 +79,14 @@ const Hero = ({ darkMode }) => {
                         className="relative z-10"
                     >
                         <img
-                            src={fotoSaya}
+                            src="../profil.avif"
                             alt="My Profile"
+                            height="675" 
                             className="w-72 lg:w-[450px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                            fetchPriority="high"
+                            srcSet="../profil-small.avif 300w, ../profil.avif 900w"
+                            sizes="(max-width: 1024px) 288px, 450px"
                         />
-                        <div className={`absolute bottom-0 left-0 right-0 h-24 z-20 bg-gradient-to-t ${darkMode ? 'from-gray-950' : 'from-white'} to-transparent`} />
                     </motion.div>
                 </motion.div>
 
@@ -197,26 +199,26 @@ const Hero = ({ darkMode }) => {
                     </div>
 
                     {/* Secondary Actions (Resume/CV) */}
-<div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm">
-    {/* Link untuk melihat/buka di tab baru */}
-    <a 
-        href="/resume.pdf" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 border border-gray-300 dark:border-gray-600 rounded-md transition-all"
-    >
-        📄 View Resume
-    </a>
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm">
+                        {/* Link untuk melihat/buka di tab baru */}
+                        <a 
+                            href= "https://drive.google.com/file/d/1E3pyeTqQM9E5NoItWQ8lI8OBQDZ67-Wo/view?usp=drive_link" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 border border-gray-300 dark:border-gray-600 rounded-md transition-all"
+                        >
+                            📄 View Resume
+                        </a>
 
-    {/* Link khusus untuk DOWNLOAD otomatis */}
-    <a 
-        href="/CV_Personal.pdf" 
-        download="CV_Muhammad_Iqbal.pdf" // Memberikan nama file saat diunduh
-        className="flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 border border-gray-300 dark:border-gray-600 rounded-md transition-all"
-    >
-        📥 Download CV
-    </a>
-</div>
+                        {/* Link khusus untuk DOWNLOAD otomatis */}
+                        <a 
+                            href="/CV_Personal.pdf" 
+                            download="CV_Muhammad_Iqbal.pdf" // Memberikan nama file saat diunduh
+                            className="flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 border border-gray-300 dark:border-gray-600 rounded-md transition-all"
+                        >
+                            📥 Download CV
+                        </a>
+                    </div>
                 </motion.div>
             </div>
         </section>

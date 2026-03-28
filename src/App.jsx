@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,lazy, Suspense   } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
+const Projects = lazy(() => import('./components/Projects'));
+const Skills = lazy(() => import('./components/Skills'));
+const Contact = lazy(() => import('./components/Contact'));
 import ChatWidget from './components/ChatWidget';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -28,9 +28,11 @@ function App() {
       <Navbar darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
       <Hero darkMode={darkMode} />
       <About darkMode={darkMode} />
-      <Projects darkMode={darkMode} />
-      <Skills darkMode={darkMode} />
-      <Contact darkMode={darkMode} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Projects />
+        <Skills />
+        <Contact />
+      </Suspense>
       <ChatWidget darkMode={darkMode} />
     </div>
   );

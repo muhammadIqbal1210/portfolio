@@ -1,17 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import project1 from '../assets/carbonfootprint.png'
-import project2 from '../assets/webbem.png'
-import project3 from '../assets/ecommerce.png'
-import project4 from '../assets/hotelapp.png'
-import sertif from '../assets/reactnative.png'
-import sertif1 from '../assets/aws.png'
-import sertif2 from '../assets/css.png'
-import sertif3 from '../assets/iot.png'
-import sertif4 from '../assets/juniorwebdeveloper.png'
-import sertif5 from '../assets/manpro.png'
-import sertif6 from '../assets/uiux.png'
-import sertif7 from '../assets/microjuniorprogramer.png'
+
 
 import { ExternalLink, Github, Code, Award, Layers } from 'lucide-react';
 
@@ -25,7 +14,7 @@ const Projects = ({ darkMode }) => {
             title: 'Carbon Footprint Web Tracker',
             description: 'A dedicated web platform designed to calculate and monitor daily carbon emissions. It features an intuitive calculator to help users assess their environmental impact and promotes sustainable living through accurate data visualization.',
             technologies: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
-            image: project1,
+            image: '../carbonfootprint.webp',
             liveLink: 'https://github.com/muhammadIqbal1210/Carbon-Footprint',
             githubLink: 'https://github.com/muhammadIqbal1210/Carbon-Footprint'
         },
@@ -33,7 +22,7 @@ const Projects = ({ darkMode }) => {
             title: 'BEM Padang State Polytechnic Portal',
             description: 'An organizational management system developed for the Student Executive Board (BEM). This platform streamlines administrative workflows, simplifies information distribution, and enhances inter-departmental coordination.',
             technologies: ['CodeIgniter', 'PHP', 'Tailwind CSS', 'Bootstrap'],
-            image: project2,
+            image: '../webbem.webp',
             liveLink: 'https://github.com/muhammadIqbal1210/Proyek_BEMPNP',
             githubLink: 'https://github.com/muhammadIqbal1210/Proyek_BEMPNP'
         },
@@ -41,7 +30,7 @@ const Projects = ({ darkMode }) => {
             title: 'Academic E-Commerce Simulation',
             description: 'A mobile-based shopping application developed as a college project to simulate the e-commerce experience. It implements core features such as product selection, real-time cart management, and a responsive checkout process.',
             technologies: ['Flutter', 'Kotlin', 'PHP', 'MySQL'],
-            image: project3,
+            image: '../ecommerce.webp',
             liveLink: 'https://github.com/muhammadIqbal1210/shop_iqbal',
             githubLink: 'https://github.com/muhammadIqbal1210/shop_iqbal'
         },
@@ -49,7 +38,7 @@ const Projects = ({ darkMode }) => {
             title: 'Hotel Reservation System',
             description: 'A mobile application project focusing on hotel booking logic. Users can browse available rooms, view facility details, and simulate real-time reservations, showcasing clean UI/UX and efficient database management.',
             technologies: ['Flutter', 'MySQL', 'PHP'],
-            image: project4,
+            image: '../hotelapp.webp',
             liveLink: 'https://github.com/muhammadIqbal1210/hotelApp',
             githubLink: 'https://github.com/muhammadIqbal1210/hotelApp'
         }
@@ -60,56 +49,56 @@ const Projects = ({ darkMode }) => {
             title: 'React Native with TypeScript',
             issuer: 'MySkill',
             description: 'Learned to build cross-platform mobile applications using React Native integrated with TypeScript for robust type-safety and better developer experience.',
-            image: sertif,
+            image: '../reactnative.webp',
             link: 'https://myskill.id/'
         },
         {
             title: 'AWS Academy Cloud Developing',
             issuer: 'AWS Academy',
             description: 'Acquired technical expertise in developing, deploying, and maintaining applications on the AWS platform, focusing on cloud architecture and best practices.',
-            image: sertif1,
+            image: '../aws.webp',
             link: 'https://aws.amazon.com/id/training/awsacademy/'
         },
         {
             title: 'Fundamental Junior Web Developer',
             issuer: 'Komdigi',
             description: 'Certified by Digitalent Komdigi for demonstrating fundamental skills in web development, including front-end styling and back-end logic implementation.',
-            image: sertif4,
+            image: '../juniorwebdeveloper.webp',
             link: 'https://digitalent.komdigi.go.id/'
         },
         {
             title: 'Micro Skill Programming',
             issuer: 'Komdigi',
             description: 'Completed intensive training focused on core programming logic, data structures, and algorithmic problem-solving techniques.',
-            image: sertif7,
+            image: '../microjuniorprogrammer.webp',
             link: 'https://digitalent.komdigi.go.id/'
         },
         {
             title: 'CSS Introduction',
             issuer: 'MySkill',
             description: 'Mastered the fundamentals of web styling, including layouts, Flexbox, Grid, and responsive design principles to create visually appealing interfaces.',
-            image: sertif2,
+            image: '../css.webp',
             link: 'https://myskill.id'
         },
         {
             title: 'IoT for Industry',
             issuer: 'MySkill',
             description: 'Explored the implementation of Internet of Things (IoT) in industrial contexts, covering sensors, connectivity protocols, and data monitoring systems.',
-            image: sertif3,
+            image: '../iot.webp',
             link: 'https://myskill.id'
         },
         {
             title: 'Project Management',
             issuer: 'Dicoding',
             description: 'Understanding the software development life cycle (SDLC), project planning, and collaborative tools to manage tech projects effectively.',
-            image: sertif5,
+            image: '../manpro.webp',
             link: 'https://www.dicoding.com/'
         },
         {
             title: 'UI UX Design',
             issuer: 'MySkill',
             description: 'Learned the principles of user-centered design, wireframing, and prototyping to create intuitive and engaging digital product experiences.',
-            image: sertif6,
+            image: '../uiux.webp',
             link: 'https://myskill.id'
         }
     ];
