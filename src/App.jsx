@@ -25,14 +25,23 @@ function App() {
 
   return (
     <div className={`min-h-screen transition-colors duration-700 ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>
-      <Navbar darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
-      <Hero darkMode={darkMode} />
-      <About darkMode={darkMode} />
-      <Suspense fallback={<div className={`py-20 ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>Loading...</div>}>
-        <Projects darkMode={darkMode} />
-        <Skills darkMode={darkMode} />
-        <Contact darkMode={darkMode} />
-      </Suspense>
+      <header>
+        <Navbar darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
+      </header>
+      <main id="main-content">
+        <Hero darkMode={darkMode} />
+        <About darkMode={darkMode} />
+        
+        <Suspense fallback={
+          <div className={`py-20 text-center ${darkMode ? 'bg-gray-950 text-white' : 'bg-white text-gray-900'}`}>
+            Loading...
+          </div>
+        }>
+          <Projects darkMode={darkMode} />
+          <Skills darkMode={darkMode} />
+          <Contact darkMode={darkMode} />
+        </Suspense>
+      </main>
       <ChatWidget darkMode={darkMode} />
     </div>
   );

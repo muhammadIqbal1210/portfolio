@@ -26,7 +26,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         navBg: 'bg-gradient-to-br from-orange-200 to-white/90',
         textPrimary: 'text-gray-900',
         textSecondary: 'text-gray-800',
-        textHover: 'hover:text-orange-500',
+        textHover: 'hover:text-orange-700',
         textActive: 'text-orange-600',
         indicator: 'from-orange-500 to-amber-500',
         button: 'from-orange-500 to-purple-600',
@@ -37,7 +37,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         textPrimary: 'text-gray-100',
         textSecondary: 'text-gray-300',
         textHover: 'hover:text-purple-400',
-        textActive: 'text-purple-500',
+        textActive: 'text-purple-700',
         indicator: 'from-purple-500 to-pink-500',
         button: 'from-purple-600 to-orange-500',
     };
@@ -55,7 +55,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 {/* Logo Section */}
                 <motion.a href="/" whileHover={{ scale: 1.05 }} className="flex items-center space-x-2">
                     <span className={`font-bold text-xl ${colors.textPrimary}`}>
-                        Muhammad Iqbal<span className="text-orange-500">.</span>
+                        Muhammad Iqbal<span className="text-orange-700">.</span>
                     </span>
                 </motion.a>
 
@@ -145,7 +145,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                                         }
                                     }}
                                     className={`text-lg font-semibold py-2 px-3 rounded-lg transition-all duration-300 ${activeSection === item.name.toLowerCase() ? colors.textActive : colors.textSecondary
-                                        } hover:bg-white/10 hover:text-orange-500`}
+                                        } hover:bg-white/10 hover:text-orange-700`}
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                 >

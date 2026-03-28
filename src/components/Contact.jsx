@@ -96,11 +96,11 @@ const Contact = ({ darkMode }) => {
                                     transition={{ duration: 0.8, delay: index * 0.1 }}
                                     className={`flex flex-col items-center text-center p-6 rounded-2xl border shadow-lg transition-all duration-500
                                         ${darkMode
-                                            ? 'bg-gray-900/60 border-gray-800 hover:bg-gray-800/80 hover:border-orange-400/60 shadow-purple-900/10'
-                                            : 'bg-white border-gray-100 hover:bg-orange-50 hover:border-orange-400/60 shadow-orange-100'}
+                                            ? 'bg-gray-900/60 border-gray-800 hover:bg-gray-800/80 hover:border-orange-500 shadow-purple-900/10'
+                                            : 'bg-white border-gray-100 hover:bg-orange-50 hover:border-orange-500 shadow-orange-100'}
                                     `}
                                 >
-                                    <div className={`mb-4 transition-all duration-500 ${darkMode ? 'text-orange-400' : 'text-orange-500'}`}>{info.icon}</div>
+                                    <div className={`mb-4 transition-all duration-500 ${darkMode ? 'text-orange-400' : 'text-orange-700'}`}>{info.icon}</div>
                                     <div>
                                         <h4 className={`font-semibold mb-2 transition-all duration-500 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                                             {info.title}
@@ -129,13 +129,14 @@ const Contact = ({ darkMode }) => {
                                         href={social.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        aria-label={`Kunjungi profil ${social.name} saya`}
                                         initial={{ opacity: 0, scale: 0.8 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 0.8, delay: index * 0.1 }}
                                         className={`p-4 rounded-xl border shadow-md transition-all duration-500
                                             ${darkMode
-                                                ? 'bg-gray-900/60 border-gray-800 text-gray-300 hover:bg-purple-900/80 hover:text-orange-400 hover:border-orange-400/60 shadow-purple-900/10'
-                                                : 'bg-white border-gray-100 text-gray-600 hover:bg-orange-50 hover:text-orange-600 hover:border-orange-400/60 shadow-orange-100'}
+                                                ? 'bg-gray-900/60 border-gray-800 text-gray-300 hover:bg-purple-900/80 hover:text-orange-400 hover:border-orange-500 shadow-purple-900/10'
+                                                : 'bg-white border-gray-100 text-gray-600 hover:bg-orange-50 hover:text-orange-600 hover:border-orange-500 shadow-orange-100'}
                                         `}
                                     >
                                         {social.icon}

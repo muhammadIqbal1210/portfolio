@@ -48,6 +48,7 @@ const ChatWidget = ({ darkMode }) => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => setIsOpen(!isOpen)}
+                    aria-label={isOpen ? "Tutup menu kontak" : "Buka pilihan kontak"}
                     className={`w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 ${
                         isOpen
                             ? 'bg-red-500 hover:bg-red-600'

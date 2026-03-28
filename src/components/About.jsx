@@ -28,9 +28,9 @@ const About = ({ darkMode }) => {
                     {/* Kotak 1: Cerita Utama (Besar) */}
                     <motion.div
                         whileHover={{ y: -5 }}
-                        className={`md:col-span-2 p-8 rounded-3xl border transition-all duration-700 ${darkMode ? 'bg-gray-900/50 border-gray-800 hover:border-orange-400/60' : 'bg-white border-gray-100 hover:border-orange-400/60'} shadow-xl`}
+                        className={`md:col-span-2 p-8 rounded-3xl border transition-all duration-700 ${darkMode ? 'bg-gray-900/50 border-gray-800 hover:border-orange-500' : 'bg-white border-gray-100 hover:border-orange-500'} shadow-xl`}
                     >
-                        <h3 className="text-xl font-bold mb-4 text-orange-500">The Journey</h3>
+                        <h3 className="text-xl font-bold mb-4 text-orange-700">The Journey</h3>
                         <p className={`leading-relaxed transition-all duration-700 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                             Hello! I'm Muhammad Iqbal, a tech enthusiast who believes that code is an
                             art form for solving problems. Although I'm just starting my professional
@@ -44,16 +44,16 @@ const About = ({ darkMode }) => {
                     {/* Kotak : Pendidikan/Education */}
                     <motion.div
                         whileHover={{ y: -5 }}
-                        className={`p-8 rounded-3xl border transition-all duration-700 ${darkMode ? 'bg-gray-900/50 border-gray-800 hover:border-orange-400/60' : 'bg-white border-gray-100 hover:border-orange-400/60'} shadow-xl`}
+                        className={`p-8 rounded-3xl border transition-all duration-700 ${darkMode ? 'bg-gray-900/50 border-gray-800 hover:border-orange-500' : 'bg-white border-gray-100 hover:border-orange-500'} shadow-xl`}
                     >
-                        <h3 className={`text-lg font-bold mb-3 transition-all duration-700 ${darkMode ? 'text-orange-400' : 'text-purple-500'}`}>Education</h3>
+                        <h3 className={`text-lg font-bold mb-3 transition-all duration-700 ${darkMode ? 'text-orange-400' : 'text-purple-700'}`}>Education</h3>
                         <div className={`space-y-3 transition-all duration-700 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                             <div>
                                 <h4 className={`font-semibold transition-all duration-700 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                                     D4 Software Engineering
                                 </h4>
                                 <p className={`text-sm transition-all duration-700 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Politeknik Negeri Padang</p>
-                                <p className={`text-sm transition-all duration-700 ${darkMode ? 'text-orange-400' : 'text-purple-500'}`}>Expected Graduation: 2027</p>
+                                <p className={`text-sm transition-all duration-700 ${darkMode ? 'text-orange-400' : 'text-purple-700'}`}>Expected Graduation: 2027</p>
                             </div>
                             <div className={`pt-2 border-t transition-all duration-700 ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
                                 <p className="text-sm">
@@ -71,7 +71,7 @@ const About = ({ darkMode }) => {
                         whileHover={{ y: -5 }}
                         className={`flex flex-col p-8 rounded-3xl border ${darkMode ? 'bg-gray-900/50 border-gray-800' : 'bg-white border-gray-100'} shadow-xl`}
                     >
-                        <h3 className="text-lg font-bold mb-4 text-blue-500">Leadership Experience</h3>
+                        <h3 className="text-lg font-bold mb-4 text-blue-700">Leadership Experience</h3>
                         <div className={`space-y-4 flex-grow ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                             <div>
                                 <h4 className={`font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Head of Communication & Information</h4>
@@ -87,10 +87,10 @@ const About = ({ darkMode }) => {
                     {/* Kotak 4: Keahlian Lain/Hobi (Sedang) */}
                     <motion.div
                         whileHover={{ y: -5 }}
-                        className={`md:col-span-2 p-8 rounded-3xl border transition-all duration-700 ${darkMode ? 'bg-gray-900/50 border-gray-800 hover:border-orange-400/60' : 'bg-white border-gray-100 hover:border-orange-400/60'} shadow-xl flex items-center justify-between`}
+                        className={`md:col-span-2 p-8 rounded-3xl border transition-all duration-700 ${darkMode ? 'bg-gray-900/50 border-gray-800 hover:border-orange-500' : 'bg-white border-gray-100 hover:border-orange-500'} shadow-xl flex items-center justify-between`}
                     >
                         <div>
-                            <h3 className="text-lg font-bold mb-2 text-orange-500">Beyond Coding</h3>
+                            <h3 className="text-lg font-bold mb-2 text-orange-700">Beyond Coding</h3>
                             <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                                 When I'm not in front of a screen, I enjoy exploring UI/UX design, 
                                 contributing to the community, or simply seeking inspiration from 

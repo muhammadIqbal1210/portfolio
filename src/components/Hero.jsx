@@ -97,7 +97,7 @@ const Hero = ({ darkMode }) => {
                     transition={{ duration: 0.8 }}
                     className="order-2 lg:order-2 text-center lg:text-left"
                 >
-                    <h2 className="text-orange-500 font-bold text-xl mb-2">Hi there, I'm</h2>
+                    <h2 className="text-orange-700 font-bold text-xl mb-2">Hi there, I'm</h2>
                     <h1 className={`text-3xl lg:text-5xl font-extrabold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                         Muhammad Iqbal
                     </h1>
@@ -190,7 +190,7 @@ const Hero = ({ darkMode }) => {
 
                     {/* Primary Actions */}
                     <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-8">
-                        <button onClick={() => scrollToSection('projects')} className="px-8 py-3 bg-orange-500 text-white rounded-full font-bold shadow-lg shadow-orange-500/30 hover:bg-orange-600 transition-all">
+                        <button onClick={() => scrollToSection('projects')} className="px-8 py-3 bg-orange-700 text-white rounded-full font-bold shadow-lg shadow-orange-500/30 hover:bg-orange-600 transition-all">
                             View Work
                         </button>
                         <button onClick={() => scrollToSection('contact')} className={`px-8 py-3 border-2 rounded-full font-bold transition-all ${darkMode ? 'border-gray-700 text-white hover:bg-gray-800' : 'border-gray-200 text-gray-900 hover:bg-gray-50'}`}>
@@ -205,7 +205,7 @@ const Hero = ({ darkMode }) => {
                             href= "https://drive.google.com/file/d/1E3pyeTqQM9E5NoItWQ8lI8OBQDZ67-Wo/view?usp=drive_link" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 border border-gray-300 dark:border-gray-600 rounded-md transition-all"
+                            className="flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-orange-700 border border-gray-300 dark:border-gray-600 rounded-md transition-all"
                         >
                             📄 View Resume
                         </a>
@@ -214,7 +214,7 @@ const Hero = ({ darkMode }) => {
                         <a 
                             href="/CV_Personal.pdf" 
                             download="CV_Muhammad_Iqbal.pdf" // Memberikan nama file saat diunduh
-                            className="flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 border border-gray-300 dark:border-gray-600 rounded-md transition-all"
+                            className="flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-orange-700 border border-gray-300 dark:border-gray-600 rounded-md transition-all"
                         >
                             📥 Download CV
                         </a>
