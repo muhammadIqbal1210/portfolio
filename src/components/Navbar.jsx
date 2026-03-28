@@ -50,7 +50,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className={`flex items-center justify-between w-full max-w-5xl ${colors.navBg} backdrop-blur-lg rounded-2xl px-6 py-2 shadow-lg border border-white/10`}
+                className={`flex items-center justify-between w-full max-w-5xl ${colors.navBg} backdrop-blur-lg rounded-2xl px-6 py-2 shadow-lg border border-white/10 transition-all duration-700`}
             >
                 {/* Logo Section */}
                 <motion.a href="/" whileHover={{ scale: 1.05 }} className="flex items-center space-x-2">

@@ -70,7 +70,7 @@ const Projects = ({ darkMode }) => {
             title: 'Micro Skill Programming',
             issuer: 'Komdigi',
             description: 'Completed intensive training focused on core programming logic, data structures, and algorithmic problem-solving techniques.',
-            image: '../microjuniorprogrammer.webp',
+            image: '../microjuniorprogramer.webp',
             link: 'https://digitalent.komdigi.go.id/'
         },
         {
@@ -103,7 +103,7 @@ const Projects = ({ darkMode }) => {
         }
     ];
     return (
-        <section id="projects" className={`py-20 px-6 ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>
+        <section id="projects" className={`py-20 px-6 transition-colors duration-700 ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>
             <div className="max-w-5xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -111,13 +111,13 @@ const Projects = ({ darkMode }) => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className={`text-4xl lg:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                        Portfolio <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-600">Showcase</span>
+                    <h2 className={`text-4xl lg:text-5xl font-bold mb-4 transition-all duration-700 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                        Portfolio <span className={`text-transparent bg-clip-text bg-gradient-to-r transition-all duration-700 ${darkMode ? 'from-purple-400 to-orange-400' : 'from-orange-500 to-purple-600'}`}>Showcase</span>
                     </h2>
-                    <p className={`text-lg mb-8 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    <p className={`text-lg mb-8 transition-all duration-700 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                         Explore my journey through projects, certifications, and technical expertise
                     </p>
-                    <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-purple-600 mx-auto rounded-full"></div>
+                    <div className={`w-24 h-1 bg-gradient-to-r mx-auto rounded-full transition-all duration-700 ${darkMode ? 'from-purple-400 to-orange-400' : 'from-orange-500 to-purple-600'}`}></div>
                 </motion.div>
 
                 <motion.div
@@ -126,12 +126,12 @@ const Projects = ({ darkMode }) => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="flex justify-center mb-12"
                 >
-                    <div className="flex flex-wrap justify-center gap-2 p-2 bg-gray-100 dark:bg-gray-800 rounded-lg max-w-full overflow-x-auto">
+                    <div className={`flex flex-wrap justify-center gap-2 p-2 rounded-lg max-w-full overflow-x-auto transition-colors duration-700 ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
                         <button
                             onClick={() => setActiveTab('projects')}
-                            className={`flex items-center space-x-1 sm:space-x-2 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all duration-300 text-sm sm:text-base ${activeTab === 'projects'
-                                ? 'bg-gradient-to-r from-orange-500 to-purple-600 text-white shadow-lg'
-                                : `${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'}`
+                            className={`flex items-center space-x-1 sm:space-x-2 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all duration-500 text-sm sm:text-base ${activeTab === 'projects'
+                                ? `bg-gradient-to-r ${darkMode ? 'from-purple-500 to-orange-500' : 'from-orange-500 to-purple-600'} text-white shadow-lg`
+                                : `${darkMode ? 'text-gray-300 hover:text-white hover:bg-gray-700' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-200'}`
                                 }`}
                         >
                             <Code size={18} className="sm:w-5 sm:h-5" />
@@ -139,9 +139,9 @@ const Projects = ({ darkMode }) => {
                         </button>
                         <button
                             onClick={() => setActiveTab('certificates')}
-                            className={`flex items-center space-x-1 sm:space-x-2 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all duration-300 text-sm sm:text-base ${activeTab === 'certificates'
-                                ? 'bg-gradient-to-r from-orange-500 to-purple-600 text-white shadow-lg'
-                                : `${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'}`
+                            className={`flex items-center space-x-1 sm:space-x-2 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all duration-500 text-sm sm:text-base ${activeTab === 'certificates'
+                                ? `bg-gradient-to-r ${darkMode ? 'from-purple-500 to-orange-500' : 'from-orange-500 to-purple-600'} text-white shadow-lg`
+                                : `${darkMode ? 'text-gray-300 hover:text-white hover:bg-gray-700' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-200'}`
                                 }`}
                         >
                             <Award size={18} className="sm:w-5 sm:h-5" />
@@ -164,16 +164,16 @@ const Projects = ({ darkMode }) => {
                                     <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 </div>
 
                                 <div className="p-4 sm:p-6">
-                                    <h3 className={`text-lg sm:text-xl font-bold mb-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                                    <h3 className={`text-lg sm:text-xl font-bold mb-3 transition-all duration-700 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                                         {project.title}
                                     </h3>
-                                    <p className={`text-sm mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                                    <p className={`text-sm mb-4 transition-all duration-700 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                                         {project.description}
                                     </p>
 
@@ -194,14 +194,14 @@ const Projects = ({ darkMode }) => {
                                                 setSelectedItem(project);
                                                 setShowModal(true);
                                             }}
-                                            className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-colors text-sm ${darkMode ? 'text-purple-400 hover:text-purple-300' : 'text-purple-600 hover:text-purple-700'}`}
+                                            className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-500 text-sm ${darkMode ? 'text-orange-400 hover:text-orange-300' : 'text-purple-600 hover:text-purple-700'}`}
                                         >
                                             <Layers size={16} />
                                             <span>View Details</span>
                                         </button>
                                         <a
                                             href={project.githubLink}
-                                            className={`flex items-center justify-center sm:justify-start space-x-2 px-4 py-2 rounded-lg font-medium transition-colors text-sm ${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'}`}
+                                            className={`flex items-center justify-center sm:justify-start space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-500 text-sm ${darkMode ? 'text-gray-300 hover:text-white hover:bg-gray-700' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'}`}
                                         >
                                             <Github size={16} />
                                             <span>Code</span>
@@ -221,25 +221,25 @@ const Projects = ({ darkMode }) => {
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                                className={`rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${darkMode ? 'bg-gray-800' : 'bg-white'} group`}
+                                className={`rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ${darkMode ? 'bg-gray-800 hover:bg-gray-700 border-gray-700' : 'bg-white hover:bg-gray-50 border-gray-100'} group border`}
                             >
                                 <div className="relative overflow-hidden">
                                     <img
                                         src={cert.image}
                                         alt={cert.title}
-                                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 </div>
 
                                 <div className="p-6">
-                                    <h3 className={`text-xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                                    <h3 className={`text-xl font-bold mb-2 transition-all duration-700 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                                         {cert.title}
                                     </h3>
-                                    <p className={`text-sm font-medium mb-3 ${darkMode ? 'text-purple-400' : 'text-purple-600'}`}>
+                                    <p className={`text-sm font-medium mb-3 transition-all duration-700 ${darkMode ? 'text-orange-400' : 'text-purple-600'}`}>
                                         Issued by {cert.issuer}
                                     </p>
-                                    <p className={`text-sm mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                                    <p className={`text-sm mb-4 transition-all duration-700 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                                         {cert.description}
                                     </p>
 
@@ -271,12 +271,12 @@ const Projects = ({ darkMode }) => {
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.8, opacity: 0 }}
-                            className={`relative max-w-2xl w-full max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl ${darkMode ? 'bg-gray-800' : 'bg-white'}`}
+                            className={`relative max-w-2xl w-full max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl transition-all duration-700 ${darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`}
                             onClick={(e) => e.stopPropagation()}
                         >
                             <button
                                 onClick={() => setShowModal(false)}
-                                className={`absolute top-4 right-4 z-10 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${darkMode ? 'bg-gray-700 hover:bg-gray-600 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'}`}
+                                className={`absolute top-4 right-4 z-10 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${darkMode ? 'bg-gray-700 hover:bg-gray-600 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'}`}
                             >
                                 ✕
                             </button>
@@ -288,23 +288,23 @@ const Projects = ({ darkMode }) => {
                                     className="w-full h-64 object-cover rounded-xl mb-6"
                                 />
 
-                                <h3 className={`text-2xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                                <h3 className={`text-2xl font-bold mb-4 transition-all duration-700 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                                     {selectedItem.title}
                                 </h3>
 
                                 {selectedItem.issuer && (
-                                    <p className={`text-lg font-medium mb-4 ${darkMode ? 'text-purple-400' : 'text-purple-600'}`}>
+                                    <p className={`text-lg font-medium mb-4 transition-all duration-700 ${darkMode ? 'text-orange-400' : 'text-purple-600'}`}>
                                         Issued by {selectedItem.issuer}
                                     </p>
                                 )}
 
-                                <p className={`text-base mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                                <p className={`text-base mb-6 transition-all duration-700 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                                     {selectedItem.description}
                                 </p>
 
                                 {selectedItem.technologies && (
                                     <div className="mb-6">
-                                        <h4 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                                        <h4 className={`text-lg font-semibold mb-3 transition-all duration-700 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                                             Technologies Used
                                         </h4>
                                         <div className="flex flex-wrap gap-2">
@@ -324,14 +324,14 @@ const Projects = ({ darkMode }) => {
                                     <div className="flex flex-col sm:flex-row gap-4">
                                         <a
                                             href={selectedItem.liveLink}
-                                            className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-colors text-sm ${darkMode ? 'text-purple-400 hover:text-purple-300' : 'text-purple-600 hover:text-purple-700'}`}
+                                            className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-500 text-sm ${darkMode ? 'text-orange-400 hover:text-orange-300' : 'text-purple-600 hover:text-purple-700'}`}
                                         >
                                             <ExternalLink size={18} />
                                             <span>Live Demo</span>
                                         </a>
                                         <a
                                             href={selectedItem.githubLink}
-                                            className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-colors text-sm ${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'}`}
+                                            className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-500 text-sm ${darkMode ? 'text-gray-300 hover:text-white hover:bg-gray-700' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'}`}
                                         >
                                             <Github size={18} />
                                             <span>View Code</span>
@@ -344,7 +344,7 @@ const Projects = ({ darkMode }) => {
                                         href={selectedItem.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-colors bg-gradient-to-r from-orange-500 to-purple-600 text-white hover:shadow-lg"
+                                        className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-500 bg-gradient-to-r ${darkMode ? 'from-purple-600 to-orange-500' : 'from-orange-500 to-purple-600'} text-white hover:shadow-lg`}
                                     >
                                         <Award size={18} />
                                         <span>View Certificate</span>

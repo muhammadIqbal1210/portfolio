@@ -51,7 +51,7 @@ const Contact = ({ darkMode }) => {
     ];
 
     return (
-        <section id="contact" className={`py-20 px-6 ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>
+        <section id="contact" className={`py-20 px-6 transition-colors duration-500 ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>
             <div className="max-w-5xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -59,13 +59,14 @@ const Contact = ({ darkMode }) => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className={`text-4xl lg:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                        Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-600">Touch</span>
+                    <h2 className={`text-4xl lg:text-5xl font-bold mb-4 transition-all duration-500 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                        Get In{' '}
+                        <span className={`text-transparent bg-clip-text bg-gradient-to-r ${darkMode ? 'from-purple-400 to-orange-400' : 'from-orange-500 to-purple-600'}`}>Touch</span>
                     </h2>
-                    <p className={`text-lg mb-8 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    <p className={`text-lg mb-8 transition-all duration-500 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                         Let's work together and bring your ideas to life
                     </p>
-                    <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-purple-600 mx-auto rounded-full"></div>
+                    <div className={`w-24 h-1 bg-gradient-to-r mx-auto rounded-full transition-all duration-500 ${darkMode ? 'from-purple-400 to-orange-400' : 'from-orange-500 to-purple-600'}`}></div>
                 </motion.div>
 
                 <div className="max-w-4xl mx-auto text-center">
@@ -77,10 +78,10 @@ const Contact = ({ darkMode }) => {
                         className="space-y-8"
                     >
                         <div>
-                            <h3 className={`text-3xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                            <h3 className={`text-3xl font-bold mb-6 transition-all duration-500 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                                 Let's Connect
                             </h3>
-                            <p className={`text-lg mb-12 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                            <p className={`text-lg mb-12 transition-all duration-500 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                                 I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
                             </p>
                         </div>
@@ -93,18 +94,21 @@ const Contact = ({ darkMode }) => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8, delay: index * 0.1 }}
-                                    className={`flex flex-col items-center text-center p-6 rounded-lg ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-50 hover:bg-gray-100'} transition-colors duration-300`}
+                                    className={`flex flex-col items-center text-center p-6 rounded-2xl border shadow-lg transition-all duration-500
+                                        ${darkMode
+                                            ? 'bg-gray-900/60 border-gray-800 hover:bg-gray-800/80 hover:border-orange-400/60 shadow-purple-900/10'
+                                            : 'bg-white border-gray-100 hover:bg-orange-50 hover:border-orange-400/60 shadow-orange-100'}
+                                    `}
                                 >
-                                    <div className="text-orange-500 mb-4">
-                                        {info.icon}
-                                    </div>
+                                    <div className={`mb-4 transition-all duration-500 ${darkMode ? 'text-orange-400' : 'text-orange-500'}`}>{info.icon}</div>
                                     <div>
-                                        <h4 className={`font-semibold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                                        <h4 className={`font-semibold mb-2 transition-all duration-500 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                                             {info.title}
                                         </h4>
                                         <a
                                             href={info.link}
-                                            className={`text-sm ${darkMode ? 'text-gray-300 hover:text-orange-400' : 'text-gray-600 hover:text-orange-600'} transition-colors duration-300`}
+                                            className={`text-sm font-medium underline underline-offset-2 transition-all duration-500
+                                                ${darkMode ? 'text-gray-300 hover:text-orange-400' : 'text-gray-600 hover:text-orange-600'}`}
                                         >
                                             {info.value}
                                         </a>
@@ -115,7 +119,7 @@ const Contact = ({ darkMode }) => {
 
                         {/* Social Links */}
                         <div>
-                            <h4 className={`text-xl font-semibold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                            <h4 className={`text-xl font-semibold mb-6 transition-all duration-500 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                                 Follow Me
                             </h4>
                             <div className="flex justify-center space-x-6">
@@ -128,7 +132,11 @@ const Contact = ({ darkMode }) => {
                                         initial={{ opacity: 0, scale: 0.8 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 0.8, delay: index * 0.1 }}
-                                        className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-orange-400' : 'bg-gray-50 hover:bg-gray-100 text-gray-600 hover:text-orange-600'} transition-all duration-300`}
+                                        className={`p-4 rounded-xl border shadow-md transition-all duration-500
+                                            ${darkMode
+                                                ? 'bg-gray-900/60 border-gray-800 text-gray-300 hover:bg-purple-900/80 hover:text-orange-400 hover:border-orange-400/60 shadow-purple-900/10'
+                                                : 'bg-white border-gray-100 text-gray-600 hover:bg-orange-50 hover:text-orange-600 hover:border-orange-400/60 shadow-orange-100'}
+                                        `}
                                     >
                                         {social.icon}
                                     </motion.a>

@@ -24,14 +24,14 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>
+    <div className={`min-h-screen transition-colors duration-700 ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>
       <Navbar darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
       <Hero darkMode={darkMode} />
       <About darkMode={darkMode} />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Projects />
-        <Skills />
-        <Contact />
+      <Suspense fallback={<div className={`py-20 ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>Loading...</div>}>
+        <Projects darkMode={darkMode} />
+        <Skills darkMode={darkMode} />
+        <Contact darkMode={darkMode} />
       </Suspense>
       <ChatWidget darkMode={darkMode} />
     </div>

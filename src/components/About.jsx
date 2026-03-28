@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const About = ({ darkMode }) => {
 
     return (
-        <section id="about" className="py-20 px-6">
+        <section id="about" className={`py-20 px-6 transition-colors duration-700 ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>
             <div className="max-w-5xl mx-auto">
                 {/* Judul Section */}
                 <motion.div
@@ -13,13 +13,13 @@ const About = ({ darkMode }) => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className={`text-4xl lg:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                        About <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-600">Me</span>
+                    <h2 className={`text-4xl lg:text-5xl font-bold mb-4 transition-all duration-700 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                        About <span className={`text-transparent bg-clip-text bg-gradient-to-r transition-all duration-700 ${darkMode ? 'from-purple-400 to-orange-400' : 'from-orange-500 to-purple-600'}`}>Me</span>
                     </h2>
-                    <p className={`text-lg mb-4  ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    <p className={`text-lg mb-4 transition-all duration-700 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                         "Unlearning, learning, and growing." 
                     </p>
-                    <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-purple-600 mx-auto rounded-full"></div>
+                    <div className={`w-24 h-1 bg-gradient-to-r mx-auto rounded-full transition-all duration-700 ${darkMode ? 'from-purple-400 to-orange-400' : 'from-orange-500 to-purple-600'}`}></div>
                 </motion.div>
 
                 {/* Bento Grid Layout */}
@@ -28,10 +28,10 @@ const About = ({ darkMode }) => {
                     {/* Kotak 1: Cerita Utama (Besar) */}
                     <motion.div
                         whileHover={{ y: -5 }}
-                        className={`md:col-span-2 p-8 rounded-3xl border ${darkMode ? 'bg-gray-900/50 border-gray-800' : 'bg-white border-gray-100'} shadow-xl`}
+                        className={`md:col-span-2 p-8 rounded-3xl border transition-all duration-700 ${darkMode ? 'bg-gray-900/50 border-gray-800 hover:border-orange-400/60' : 'bg-white border-gray-100 hover:border-orange-400/60'} shadow-xl`}
                     >
                         <h3 className="text-xl font-bold mb-4 text-orange-500">The Journey</h3>
-                        <p className={`leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                        <p className={`leading-relaxed transition-all duration-700 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                             Hello! I'm Muhammad Iqbal, a tech enthusiast who believes that code is an
                             art form for solving problems. Although I'm just starting my professional
                             career, I've dedicated my time to building functional web and mobile applications.
@@ -44,18 +44,18 @@ const About = ({ darkMode }) => {
                     {/* Kotak : Pendidikan/Education */}
                     <motion.div
                         whileHover={{ y: -5 }}
-                        className={`p-8 rounded-3xl border ${darkMode ? 'bg-gray-900/50 border-gray-800' : 'bg-white border-gray-100'} shadow-xl`}
+                        className={`p-8 rounded-3xl border transition-all duration-700 ${darkMode ? 'bg-gray-900/50 border-gray-800 hover:border-orange-400/60' : 'bg-white border-gray-100 hover:border-orange-400/60'} shadow-xl`}
                     >
-                        <h3 className="text-lg font-bold mb-3 text-purple-500">Education</h3>
-                        <div className={`space-y-3 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                        <h3 className={`text-lg font-bold mb-3 transition-all duration-700 ${darkMode ? 'text-orange-400' : 'text-purple-500'}`}>Education</h3>
+                        <div className={`space-y-3 transition-all duration-700 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                             <div>
-                                <h4 className={`font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                                <h4 className={`font-semibold transition-all duration-700 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                                     D4 Software Engineering
                                 </h4>
-                                <p className="text-sm">Politeknik Negeri Padang</p>
-                                <p className="text-sm text-purple-500">Expected Graduation: 2027</p>
+                                <p className={`text-sm transition-all duration-700 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Politeknik Negeri Padang</p>
+                                <p className={`text-sm transition-all duration-700 ${darkMode ? 'text-orange-400' : 'text-purple-500'}`}>Expected Graduation: 2027</p>
                             </div>
-                            <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+                            <div className={`pt-2 border-t transition-all duration-700 ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
                                 <p className="text-sm">
                                     <span className="font-medium">Department:</span> Information Technology
                                 </p>
@@ -78,7 +78,7 @@ const About = ({ darkMode }) => {
                                 <p className="text-sm">Student Organization</p>
                             </div>
                             <div>
-                                <h4 className={`font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Vice President of Students</h4>
+                                <h4 className={`font-semibold transition-all duration-700 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Vice President of Students</h4>
                                 <p className="text-sm">Politeknik Negeri Padang</p>
                             </div>
                         </div>
@@ -87,7 +87,7 @@ const About = ({ darkMode }) => {
                     {/* Kotak 4: Keahlian Lain/Hobi (Sedang) */}
                     <motion.div
                         whileHover={{ y: -5 }}
-                        className={`md:col-span-2 p-8 rounded-3xl border ${darkMode ? 'bg-gray-900/50 border-gray-800' : 'bg-white border-gray-100'} shadow-xl flex items-center justify-between`}
+                        className={`md:col-span-2 p-8 rounded-3xl border transition-all duration-700 ${darkMode ? 'bg-gray-900/50 border-gray-800 hover:border-orange-400/60' : 'bg-white border-gray-100 hover:border-orange-400/60'} shadow-xl flex items-center justify-between`}
                     >
                         <div>
                             <h3 className="text-lg font-bold mb-2 text-orange-500">Beyond Coding</h3>

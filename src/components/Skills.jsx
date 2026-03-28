@@ -38,7 +38,7 @@ const Skills = ({ darkMode }) => {
     ];
 
     return (
-        <section id="skills" className={`py-20 px-6 transition-colors duration-500 ${darkMode ? 'bg-gray-950' : 'bg-gray-50'}`}>
+        <section id="skills" className={`py-20 px-6 transition-colors duration-700 ${darkMode ? 'bg-gray-950' : 'bg-gray-50'}`}>
             <div className="max-w-5xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -47,10 +47,10 @@ const Skills = ({ darkMode }) => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className={`text-4xl lg:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                        My <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-600">Skills</span>
+                    <h2 className={`text-4xl lg:text-5xl font-bold mb-4 transition-all duration-700 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                        My <span className={`text-transparent bg-clip-text bg-gradient-to-r transition-all duration-700 ${darkMode ? 'from-purple-400 to-orange-400' : 'from-orange-500 to-purple-600'}`}>Skills</span>
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-purple-600 mx-auto rounded-full"></div>
+                    <div className={`w-24 h-1 bg-gradient-to-r mx-auto rounded-full transition-all duration-700 ${darkMode ? 'from-purple-400 to-orange-400' : 'from-orange-500 to-purple-600'}`}></div>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -61,13 +61,13 @@ const Skills = ({ darkMode }) => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
                             viewport={{ once: true }}
-                            className={`rounded-3xl p-8 border ${
+                            className={`rounded-3xl p-8 border transition-all duration-700 ${
                                 darkMode 
-                                ? 'bg-gray-900/50 border-gray-800 shadow-2xl shadow-purple-900/10' 
-                                : 'bg-white border-gray-100 shadow-xl'
-                            } hover:border-orange-500/50 transition-colors duration-300`}
+                                ? 'bg-gray-900/50 border-gray-800 shadow-2xl shadow-purple-900/10 hover:border-orange-400/50' 
+                                : 'bg-white border-gray-100 shadow-xl hover:border-orange-500/50'
+                            }`}
                         >
-                            <h3 className={`text-xl font-bold mb-8 text-center ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                            <h3 className={`text-xl font-bold mb-8 text-center transition-all duration-700 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                                 {skillCategory.category}
                             </h3>
 
@@ -77,24 +77,24 @@ const Skills = ({ darkMode }) => {
                                         <div className="flex items-center justify-between mb-2">
                                             <div className="flex items-center gap-3">
                                                 {/* Container Logo dengan Filter Dark Mode */}
-                                                <div className={`p-2 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} group-hover:scale-110 transition-transform duration-300`}>
+                                                <div className={`p-2 rounded-lg group-hover:scale-110 transition-all duration-500 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'}`}>
                                                     <img 
                                                         src={tech.icon} 
                                                         alt={tech.name}
                                                         className={`w-5 h-5 object-contain ${darkMode ? 'invert brightness-200' : ''}`}
                                                     />
                                                 </div>
-                                                <span className={`text-sm font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                                                <span className={`text-sm font-semibold transition-all duration-700 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                                                     {tech.name}
                                                 </span>
                                             </div>
-                                            <span className={`text-xs font-bold ${darkMode ? 'text-orange-400' : 'text-orange-600'}`}>
+                                            <span className={`text-xs font-bold transition-all duration-700 ${darkMode ? 'text-orange-400' : 'text-orange-600'}`}>
                                                 {tech.level}%
                                             </span>
                                         </div>
                                         
                                         {/* Progress Bar Area */}
-                                        <div className="relative w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 overflow-hidden">
+                                        <div className={`relative w-full rounded-full h-1.5 overflow-hidden transition-all duration-700 ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}`}>
                                             <motion.div
                                                 initial={{ width: 0 }}
                                                 whileInView={{ width: `${tech.level}%` }}
