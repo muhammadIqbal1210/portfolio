@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://itsiqbal.my.id
+Sitemap: https://itsiqbal.my.id/sitemap.xml
