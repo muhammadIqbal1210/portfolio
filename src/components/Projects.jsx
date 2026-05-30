@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-
 import { ExternalLink, Github, Code, Award, Layers } from 'lucide-react';
 
 const Projects = ({ darkMode }) => {
@@ -41,6 +40,22 @@ const Projects = ({ darkMode }) => {
             image: '../hotelapp.webp',
             liveLink: 'https://github.com/muhammadIqbal1210/hotelApp',
             githubLink: 'https://github.com/muhammadIqbal1210/hotelApp'
+        },
+        {
+            title: 'Machine Learning For Inventory Management for Pharmacy',
+            description: 'A machine learning-based inventory management system designed for pharmacies. This project utilizes predictive analytics to optimize stock levels, reduce waste, and ensure timely replenishment of medical supplies.',
+            technologies: ['Python', 'PostgreSQL', 'Nuxt.js', 'Tailwind CSS'],
+            image: '../pharma-prophet.webp',
+            liveLink: 'https://github.com/muhammadIqbal1210/pharma-prophet',
+            githubLink: 'https://github.com/muhammadIqbal1210/pharma-prophet'
+        },
+        {
+            title: 'Smart Contract and Smart IOT for Supply Chain Management in agriculture',
+            description: 'A comprehensive project integrating smart contracts and IoT technology to enhance supply chain management in agriculture. This system enables real-time tracking of produce, automates transactions, and ensures transparency from farm to consumer.',
+            technologies: ['Node.js', 'PostgreSQL', 'Next.js', 'Tailwind CSS'],
+            image: '../pharma-prophet.webp',
+            liveLink: 'https://github.com/muhammadIqbal1210/ElectraTech',
+            githubLink: 'https://github.com/muhammadIqbal1210/ElectraTech'
         }
     ];
 
