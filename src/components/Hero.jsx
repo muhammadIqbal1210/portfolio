@@ -212,7 +212,7 @@ const Hero = ({ darkMode }) => {
 
                         {/* Link khusus untuk DOWNLOAD otomatis */}
                         <a 
-                            href="/CV_Personal.pdf" 
+                            href="/CV_MuhammadIqbal_IT.pdf" 
                             download="CV_Muhammad_Iqbal.pdf" // Memberikan nama file saat diunduh
                             className="flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-orange-700 border border-gray-300 dark:border-gray-600 rounded-md transition-all"
                         >
