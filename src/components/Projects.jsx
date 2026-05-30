@@ -53,7 +53,7 @@ const Projects = ({ darkMode }) => {
             title: 'Smart Contract and Smart IOT for Supply Chain Management in agriculture',
             description: 'A comprehensive project integrating smart contracts and IoT technology to enhance supply chain management in agriculture. This system enables real-time tracking of produce, automates transactions, and ensures transparency from farm to consumer.',
             technologies: ['Node.js', 'PostgreSQL', 'Next.js', 'Tailwind CSS'],
-            image: '../pharma-prophet.webp',
+            image: '../electra.webp',
             liveLink: 'https://github.com/muhammadIqbal1210/ElectraTech',
             githubLink: 'https://github.com/muhammadIqbal1210/ElectraTech'
         }
