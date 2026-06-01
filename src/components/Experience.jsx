@@ -14,7 +14,7 @@ const Experience = ({ darkMode }) => {
       ]
     },
     {
-      company: 'Universitas Andalas',
+      company: 'Direktorat Teknologi Informasi Universitas Andalas',
       role: 'IT Support Specialist Intern',
       period: 'Feb 2026 - July 2026', 
       description: 'Maintained institutional digital infrastructure, enhanced web security postures, and streamlined content management systems.',
