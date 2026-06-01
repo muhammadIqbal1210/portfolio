@@ -56,6 +56,14 @@ const Projects = ({ darkMode }) => {
             image: '../electra.webp',
             liveLink: 'https://github.com/muhammadIqbal1210/ElectraTech',
             githubLink: 'https://github.com/muhammadIqbal1210/ElectraTech'
+        },
+        {
+            title: 'Wordpress Web Universitas Andalas',
+            description: 'A dynamic website was developed for Andalas University using WordPress. This project focused on providing a user-friendly interface, seamless content management, and responsive design for the university, allowing for easy user access. The project was developed collaboratively on a single server and deployed with Docker.',
+            technologies: ['WordPress','docker','PHP', 'MySQL', 'CSS'],
+            image: '../wpunand.webp',
+            liveLink: 'https://dti.unand.ac.id/',
+            githubLink: 'https://dti.unand.ac.id/'
         }
     ];
 
