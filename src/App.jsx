@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 const Projects = lazy(() => import('./components/Projects'));
 const Skills = lazy(() => import('./components/Skills'));
+const Experience = lazy(() => import('./components/Experience'));
 const Contact = lazy(() => import('./components/Contact'));
 import ChatWidget from './components/ChatWidget';
 import AOS from 'aos';
@@ -37,6 +38,7 @@ function App() {
             Loading...
           </div>
         }>
+          <Experience darkMode={darkMode} />
           <Projects darkMode={darkMode} />
           <Skills darkMode={darkMode} />
           <Contact darkMode={darkMode} />
