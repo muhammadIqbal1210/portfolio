@@ -202,7 +202,7 @@ const Hero = ({ darkMode }) => {
                     <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm">
                         {/* Link untuk melihat/buka di tab baru */}
                         <a 
-                            href= "https://drive.google.com/file/d/1E3pyeTqQM9E5NoItWQ8lI8OBQDZ67-Wo/view?usp=drive_link" 
+                            href= "https://drive.google.com/file/d/1hWqL_sLMXiy7uUGoKeRtETgVSJo2YRDy/view?usp=drive_link" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-orange-700 border border-gray-300 dark:border-gray-600 rounded-md transition-all"
