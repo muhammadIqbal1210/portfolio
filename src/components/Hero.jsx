@@ -207,7 +207,7 @@ const Hero = ({ darkMode }) => {
                             rel="noopener noreferrer"
                             className="flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-orange-700 border border-gray-300 dark:border-gray-600 rounded-md transition-all"
                         >
-                            📄 View Resume
+                            📄 My Portfolio
                         </a>
 
                         {/* Link khusus untuk DOWNLOAD otomatis */}
