@@ -22,7 +22,7 @@ const Projects = ({ darkMode }) => {
             description: 'An organizational management system developed for the Student Executive Board (BEM). This platform streamlines administrative workflows, simplifies information distribution, and enhances inter-departmental coordination.',
             technologies: ['CodeIgniter', 'PHP', 'Tailwind CSS', 'Bootstrap'],
             image: '../webbem.webp',
-            liveLink: 'https://github.com/muhammadIqbal1210/Proyek_BEMPNP',
+            liveLink: 'https://blanchedalmond-dove-382834.hostingersite.com/',
             githubLink: 'https://github.com/muhammadIqbal1210/Proyek_BEMPNP'
         },
         {
@@ -54,7 +54,7 @@ const Projects = ({ darkMode }) => {
             description: 'A comprehensive project integrating smart contracts and IoT technology to enhance supply chain management in agriculture. This system enables real-time tracking of produce, automates transactions, and ensures transparency from farm to consumer.',
             technologies: ['Node.js', 'PostgreSQL', 'Next.js', 'Tailwind CSS'],
             image: '../electra.webp',
-            liveLink: 'https://github.com/muhammadIqbal1210/ElectraTech',
+            liveLink: 'https:smartfarm.electratech.id',
             githubLink: 'https://github.com/muhammadIqbal1210/ElectraTech'
         },
         {
