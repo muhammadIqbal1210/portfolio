@@ -16,7 +16,7 @@ const Experience = ({ darkMode }) => {
     {
       company: 'Direktorat Teknologi Informasi Universitas Andalas',
       role: 'IT Support Specialist Intern',
-      period: 'Feb 2026 - July 2026', 
+      period: 'Feb 2026 - August 2026', 
       description: 'Maintained institutional digital infrastructure, enhanced web security postures, and streamlined content management systems.',
       bullets: [
         'Successfully planned and executed data and database migrations for university web portals with zero downtime.',
@@ -24,16 +24,6 @@ const Experience = ({ darkMode }) => {
         'Built, customized, and maintained university sub-sites using WordPress with responsive layouts.'
       ]
     },
-    {
-      company: 'Udacoding',
-      role: 'Graphic Designer Intern',
-      period: 'Feb 2026 - May 2026', 
-      description: 'Created visually compelling digital assets to elevate brand identity and support technical marketing campaigns.',
-      bullets: [
-        'Conceptualized and produced high-quality graphics for social media, promotional materials, and branding.',
-        'Partnered with marketing and development teams to translate complex tech concepts into engaging visual layouts.'
-      ]
-    }
   ];
 
   return (
