@@ -26,7 +26,7 @@ const Projects = ({ darkMode }) => {
             githubLink: 'https://github.com/muhammadIqbal1210/Proyek_BEMPNP'
         },
         {
-            title: 'Academic E-Commerce Simulation',
+            title: 'E-Commerce Application',
             description: 'A mobile-based shopping application developed as a college project to simulate the e-commerce experience. It implements core features such as product selection, real-time cart management, and a responsive checkout process.',
             technologies: ['Flutter', 'Kotlin', 'PHP', 'MySQL'],
             image: '../ecommerce.webp',
