@@ -98,7 +98,7 @@ const Hero = ({ darkMode }) => {
                     className="order-2 lg:order-2 text-center lg:text-left"
                 >
                     <h2 className="text-orange-700 font-bold text-xl mb-2">Hi there, I'm</h2>
-                    <h1 className={`text-3xl lg:text-5xl font-extrabold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                    <h1 className={`text-3xl lg:text-5xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                         Muhammad Iqbal
                     </h1>
 
