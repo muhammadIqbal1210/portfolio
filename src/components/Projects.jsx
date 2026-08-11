@@ -46,7 +46,7 @@ const Projects = ({ darkMode }) => {
             description: 'A machine learning-based inventory management system designed for pharmacies. This project utilizes predictive analytics to optimize stock levels, reduce waste, and ensure timely replenishment of medical supplies.',
             technologies: ['Python', 'PostgreSQL', 'Nuxt.js', 'Tailwind CSS'],
             image: '../pharma-prophet.webp',
-            liveLink: 'https://github.com/muhammadIqbal1210/pharma-prophet',
+            liveLink: 'https://pharmacast.web.id',
             githubLink: 'https://github.com/muhammadIqbal1210/pharma-prophet'
         },
         {
@@ -54,7 +54,7 @@ const Projects = ({ darkMode }) => {
             description: 'A comprehensive project integrating smart contracts and IoT technology to enhance supply chain management in agriculture. This system enables real-time tracking of produce, automates transactions, and ensures transparency from farm to consumer.',
             technologies: ['Node.js', 'PostgreSQL', 'Next.js', 'Tailwind CSS'],
             image: '../electra.webp',
-            liveLink: 'https:smartfarm.electratech.id',
+            liveLink: 'https://smartfarm.electratech.id',
             githubLink: 'https://github.com/muhammadIqbal1210/ElectraTech'
         },
         {
